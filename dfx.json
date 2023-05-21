@@ -5,9 +5,7 @@
       "type": "motoko"
     },
     "HomeworkDiary_frontend": {
-      "dependencies": [
-        "HomeworkDiary_backend"
-      ],
+      "dependencies": ["HomeworkDiary_backend"],
       "frontend": {
         "entrypoint": "src/HomeworkDiary_frontend/src/index.html"
       },
