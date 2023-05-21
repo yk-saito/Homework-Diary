@@ -6,8 +6,10 @@
     "lineWidth": 80,
     "ignore": [
       ".yarn/**",
+      "**/.dfx/**",
       "**/.gitignore",
-      "**/.next/**"
+      "**/declarations/**",
+      "**/dist/**"
     ]
   },
   "linter": {
@@ -15,10 +17,10 @@
     "rules": {},
     "ignore": [
       ".yarn/**",
-      "**/.gitignore",
-      "**/.dist/**",
       "**/.dfx/**",
-      "**/declarations/**"
+      "**/.gitignore",
+      "**/declarations/**",
+      "**/dist/**"
     ]
   },
   "javascript": {
