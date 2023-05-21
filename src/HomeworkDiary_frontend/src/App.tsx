@@ -1,27 +1,56 @@
+import {
+  Heading,
+  VStack,
+  IconButton,
+  Button,
+  ButtonGroup,
+  Flex,
+  InputGroup,
+  InputLeftElement,
+  Input,
+} from '@chakra-ui/react'; // TODO: test
+import { FiSearch } from 'react-icons/fi';
+
+import { useAuthenticationContext } from './hooks/authenticationContext';
+
 function App() {
+  const { authentication, authenticate } = useAuthenticationContext();
+
+  const handleInternetIdentity = async () => {
+    console.log('handleInternetIdentity');
+    await authenticate();
+  };
+
+  const handleSearch = async () => {
+    console.log('handleSearch');
+  };
+
   return (
-    <div style={{ "fontSize": "30px" }}>
-      <div style={{ "backgroundColor": "yellow" }}>
-        <p>Greetings, from DFINITY!</p>
-        <p>
-          {" "}
-          Type your message in the Name input field, then click{" "}
-          <b> Get Greeting</b> to display the result.
-        </p>
-      </div>
-      {/* <div style={{ margin: "30px" }}>
-//         <input
-//           id="name"
-//           value={name}
-//           onChange={(ev) => setName(ev.target.value)}
-//         ></input>
-//         <button onClick={doGreet}>Get Greeting!</button>
-//       </div>
-//       <div>
-//         Greeting is: "
-//         <span style={{ color: "blue" }}>{message}</span>"
-//       </div> */}
-    </div>
+    <VStack p={4} minH='100vh' pb={28}>
+      <ButtonGroup variant='outline' spacing='6' alignSelf='flex-end'>
+        <IconButton
+          icon={<FiSearch />}
+          alignSelf='flex-end'
+          aria-label='Search task'
+          size='lg'
+          onClick={handleSearch}
+        />
+        {authentication?.principal ? (
+          <Button>{authentication.principal.toString()} </Button>
+        ) : (
+          <Button
+            size='lg'
+            alignSelf='flex-end'
+            onClick={handleInternetIdentity}
+          >
+            Internet Identity
+          </Button>
+        )}
+      </ButtonGroup>
+      <Heading p='5' size='xl'>
+        Homework
+      </Heading>
+    </VStack>
   );
 }
 
