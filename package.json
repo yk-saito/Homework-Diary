@@ -1,7 +1,7 @@
 {
-  "name": "HomeworkDiary_frontend",
+  "name": "Homework-Diary",
   "version": "0.2.0",
-  "description": "Internet Computer starter application",
+  "description": "Homework management application",
   "keywords": [
     "Internet Computer",
     "Motoko",
