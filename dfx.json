@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "HomeworkDiary_backend": {
+      "main": "src/HomeworkDiary_backend/main.mo",
+      "type": "motoko"
+    },
+    "HomeworkDiary_frontend": {
+      "dependencies": [
+        "HomeworkDiary_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/HomeworkDiary_frontend/src/index.html"
+      },
+      "source": [
+        "src/HomeworkDiary_frontend/assets",
+        "dist/HomeworkDiary_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
