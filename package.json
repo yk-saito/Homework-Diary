@@ -8,13 +8,20 @@
     "JavaScript",
     "Canister"
   ],
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
   "scripts": {
     "build": "webpack",
     "prebuild": "dfx generate",
     "start": "webpack serve --mode development --env development",
     "deploy:local": "dfx deploy --network=local",
     "deploy:ic": "dfx deploy --network=ic",
-    "generate": "dfx generate HomeworkDiary_backend"
+    "generate": "dfx generate HomeworkDiary_backend",
+    "format": "yarn run rome format .",
+    "format:fix": "yarn run rome format . --write",
+    "lint": "yarn run rome check .",
+    "lint:fix": "yarn run rome check . --apply"
   },
   "dependencies": {
     "@dfinity/agent": "^0.15.6",
@@ -36,7 +43,10 @@
     "events": "3.3.0",
     "framer-motion": "^10.12.12",
     "html-webpack-plugin": "5.5.0",
+    "lint-staged": "^13.2.2",
     "process": "0.11.10",
+    "rome": "^12.1.2",
+    "simple-git-hooks": "^2.8.1",
     "stream-browserify": "3.0.0",
     "terser-webpack-plugin": "^5.3.3",
     "ts-loader": "^9.4.2",
