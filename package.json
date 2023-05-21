@@ -24,6 +24,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@chakra-ui/react": "^2.6.1",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "assert": "2.0.0",
@@ -31,6 +34,7 @@
     "copy-webpack-plugin": "^11.0.0",
     "dotenv": "^16.0.3",
     "events": "3.3.0",
+    "framer-motion": "^10.12.12",
     "html-webpack-plugin": "5.5.0",
     "process": "0.11.10",
     "stream-browserify": "3.0.0",
